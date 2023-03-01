@@ -11,6 +11,16 @@
 
         <p class="text-center fs-1">Formulário de cadastro de veículo</p>
 
+            <label for="tipo-veiculo">Tipo do Veiculo: </label>
+                <select name="tipo-veiculo">
+                    <option value="Carro">Carro</option>
+                    <option value="Moto">Moto</option>
+                    <option value="Caminhão">Caminhão</option>
+                </select>
+                <br>
+
+                <br>
+
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Modelo</span>
           <input type="text" name="modelo" class="form-control">
