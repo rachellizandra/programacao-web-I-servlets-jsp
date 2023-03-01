@@ -15,6 +15,7 @@ public class CadastroVeiculo extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         /**
+         *     Enum TipoVeiculo;
          *     String modelo;
          *     String marca;
          *     String ano;
@@ -22,19 +23,21 @@ public class CadastroVeiculo extends HttpServlet {
          */
 
         //seleciona os parâmetros do index.jsp
+        String tipo = req.getParameter("tipo-veiculo");
         String modelo = req.getParameter("modelo");
         String marca = req.getParameter("marca");
         String ano = req.getParameter("ano");
         String placa = req.getParameter("placa");
 
-        if (modelo.equals("") || marca.equals("") || ano.equals("")|| placa.equals("")) {
+        if (tipo.equals("") || modelo.equals("") || marca.equals("") || ano.equals("")|| placa.equals("")) {
             resp.setContentType("text/html");
             resp.getWriter().println("<h3>Dados obrigatórios não preenchidos!</h3>");
         } else {
             //cria os atributos
+            req.setAttribute("tipo-veiculo", tipo);
             req.setAttribute("modelo", modelo);
             req.setAttribute("marca", marca);
-            req.setAttribute("ano", marca);
+            req.setAttribute("ano", ano);
             req.setAttribute("placa", placa);
 
             //redireciona os dados cadastrados e envia para o data.jsp
