@@ -9,6 +9,13 @@
 
           <p class="text-center fs-1">Resumo</p>
 
+           <div class="mb-3 row">
+             <label for="staticTipo" class="col-md-2 col-form-label">Tipo de veículo</label>
+             <div class="col-md-10">
+               <input type="text" readonly class="form-control-plaintext" id="staticTipo" value="<%= request.getAttribute("tipo-veiculo") %>">
+             </div>
+          </div>
+
           <div class="mb-3 row">
             <label for="staticModelo" class="col-md-2 col-form-label">Modelo</label>
             <div class="col-md-10">
